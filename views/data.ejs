@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/main.css">
+    
+    <link rel="stylesheet" type="text/css"   href="css/style2.css">
+    <link rel="stylesheet" type="text/css" href="vendors/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="vendors/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="vendors/nice-select/nice-select.css">
+    <link rel="stylesheet" type="text/css" href="vendors/owl-carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css"  href="vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.google.com/share?selection.family=Poppins:500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Random Hero</title>
+</head>
+<body >
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="navbar-brand logo_h" href="index"><img src="media/logo.svg" width="100" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+                            <li class="nav-item active"><a class="nav-link" href="index">Home</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                   aria-expanded="false">Tournament</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="/sport">Sport</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/cyber">CyberSport</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                   aria-expanded="false">About Us</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="blog">Nurdaulet</a></li>
+                                    <li class="nav-item"><a class="nav-link"  href="single-blog">Azhar</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" onclick="scrollWin()">Contact</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                   aria-expanded="false">Profile Detail</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link">Name:  <%= name %> </a></li>
+                                    <li class="nav-item"><a class="nav-link"> Email: <%= email %></a></li>
+                                    <li class="nav-item"><a class="nav-link"  href="/logout">Logout</a></li>
+            
+                                </ul>
+                            </li>
+                        </ul>
+    
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+<!-- HTML !-->
+<main class="site-main">
+    <!--BANNER-->
+    <section class="hero-banner">
+        <div class="container">
+            <div class="row no-gutters align-items-center pt-60px">
+                <div class="col-5 d-none d-sm-block">
+                    <div class="hero-banner__img">
+                        <img class="img-fluid" src="media/banner.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-7 col-lg-6 offset-lg-1 pl-4 pl-md-5 pl-lg-0">
+                    <div class="hero-banner__content">
+                        <h4>Competition is fun</h4>
+                        <h1>Participate in tournaments with us</h1>
+                        <p>Create tournaments. participate in any tournaments. Win. Have fun with your friends. Find friends. And finally enjoy.</p>
+                        <a class="button button-hero" href="#">Take part</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--    Just Text   -->
+    <div class="container">
+        <div class="offer__content">
+            <div class="Ncenter">
+                <h1>Your competition, your rules</h1>
+                <p>Manage all your tournaments in one placewhatever their structures and matches formats. Decide how players participate in your tournaments. Generate a white label website to display the results on. Connect your services with our API. Keep control over your data.</p>
+                <p> Whether you run grassroot tournaments or professional leagues, RandomHero makes it all possible.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Pics-->
+    <section class="section-margin mt-0">
+
+            <div class="hero-carousel__slide">
+                <img src="media/sports/volleyball2.jpg" width="500px"alt="" class="img-fluid">
+                <a href="#" class="hero-carousel__slideOverlay">
+                    <h3>Volleyball</h3>
+                    <p>Popular sport</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="media/sports/football.jpg"  alt="" class="img-fluid">
+                <a href="#" class="hero-carousel__slideOverlay">
+                    <h3>Football</h3>
+                    <p>Popular sport</p>
+                </a>
+            </div>
+            <div class="hero-carousel__slide">
+                <img src="media/sports/basketball2.jpg" alt="" class="img-fluid">
+                <a href="#" class="hero-carousel__slideOverlay">
+                    <h3>Basketball</h3>
+                    <p>Popular sport</p>
+                </a>
+
+        </div>
+    </section>
+</main>
+<!--Footer-->
+<footer class="footer">
+    <div class="footer-area">
+        <div class="container">
+            <div class="row section_gap">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-footer-widget tp_widgets">
+                        <h4 class="footer_title large_title">Our Mission</h4>
+                        <p>
+                            Some text. some text some text some text some text some text some text some text some text
+                            some text some text some text
+                        </p>
+                        <p>
+                            Some text. some text some text some text some text some text some text
+                        </p>
+                    </div>
+                </div>
+                <div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
+                    <div class="single-footer-widget tp_widgets">
+                        <h4 class="footer_title">Quick Links</h4>
+                        <ul class="list">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Tournaments</a></li>
+                            <li><a href="#">Sponsors</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="single-footer-widget instafeed">
+                        <h4 class="footer_title">Gallery</h4>
+                        <ul class="list instafeed d-flex flex-wrap">
+                            <li><img src="media/gallery/r1.jpg" alt=""></li>
+                            <li><img src="media/gallery/r2.jpg" alt=""></li>
+                            <li><img src="media/gallery/r3.jpg" alt=""></li>
+                            <li><img src="media/gallery/r5.jpg" alt=""></li>
+                            <li><img src="media/gallery/r7.jpg" alt=""></li>
+                            <li><img src="media/gallery/r8.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-footer-widget tp_widgets">
+                        <h4 class="footer_title">Contact Us</h4>
+                        <div class="ml-40">
+                            <p class="sm-head">
+                                <span class="fa fa-location-arrow"></span>
+                                Head Office
+                            </p>
+                            <p>Expo, AstanaIT, Nur-Sultan</p>
+
+                            <p class="sm-head">
+                                <span class="fa fa-phone"></span>
+                                Phone Number
+                            </p>
+                            <p>
+                                +7-775-541-10-43 <br>
+                                +7-707-723-05-04
+                            </p>
+
+                            <p class="sm-head">
+                                <span class="fa fa-envelope"></span>
+                                Email
+                            </p>
+                            <p>
+                                nukan04@mail.ru <br>
+                                turashbayeva2004@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+	
+    function scrollWin() {
+        window.scrollBy(0, 1830);
+    }
+
+	</script>
+</body>
+</html>
