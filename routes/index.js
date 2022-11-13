@@ -5,7 +5,7 @@ var path = require('path');
 var app  = express();
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
-app.use(express.static(path.join(__dirname, 'view')));
+
 
 router.get('/16days', function (req, res, next) {
 	return res.render('/16days.ejs');
