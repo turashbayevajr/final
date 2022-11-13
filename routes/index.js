@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
+var path = require('path');
+var app  = express();
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
-
+app.use(express.static(path.join(__dirname, 'view')));
 
 router.get('/16days', function (req, res, next) {
 	return res.render('/16days.ejs');
@@ -158,5 +160,6 @@ router.post('/forgetpass', function (req, res, next) {
 	});
 	
 });
+
 
 module.exports = router;

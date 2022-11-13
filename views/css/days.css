@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap');
+
+body{
+    font-family: 'Sono', sans-serif;;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+}
+
+nav{
+    background-color: white;
+}
+
+.header_flex{
+    height: 80px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.header_logo img{
+    width: 150px;
+    cursor: pointer;
+}
+
+.header_links a{
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 100px;
+    color: rgb(104, 8, 194);
+    transition: 0.5s;
+    font-size: 16px;
+}
+
+.header_links a:hover{
+    color:#F7859C;
+    transform: scale(1.1)
+}
+
+.textbox{
+    color: white;
+    width: 80%;
+    margin: auto;
+    padding-top: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textbox_title, .textbox_photo{
+    flex-basis: 45%;
+}
+
+.textbox_photo img{
+    width: 100%;
+}
+
+.textbox h1{
+    text-transform: uppercase;
+    font-size: 52px;
+}
+
+.typewrite{
+    text-transform: lowercase;
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    color:#F7859C;
+}
+
+.header_buttons{
+    padding-top: 20px;
+    display: flex;
+}
+
+.header_buttons a, .btn_ct{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid white;
+    background-color: rgba(104, 8, 194, 0.1);
+    padding: 12px;
+    margin-right: 40px;
+    border-radius: 10px;
+    transition: 1s;
+    display: block;
+}
+
+.btn_ct{
+    display: inline;
+    background-color: rgba(104, 8, 194, 0.5);
+    cursor: pointer;
+}
+
+.header_buttons a:hover, .btn_ct:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    background-color: #F7859C;
+}
+
+.block1{
+    width: 90%;
+    margin: 70px auto;
+    text-align: center;
+}
+
+.block1 .bv{
+    color:rgb(104, 8, 194);
+}
+
+.block1 .pink{
+    color:#F7859C
+}
+
+.block1 .blue{
+    color:cornflowerblue
+}
+
+.do{
+    padding-top: 50px;
+    width: 70%;
+    margin: auto;
+    text-align: left;
+    font-size: 20px;
+}
+
+.do p{
+    display: inline;
+}
+
+footer{
+    margin-top: 8%;
+    height: 60vh;
+    width: 100%;
+    background-image: url("./images/footer.jpg");
+    background-position: top;
+    background-size: cover;
+}
+
+.footer{
+    width: 80%;
+    text-align: center;
+    padding-top: 10%;
+    margin: auto;
+}
+
+footer h4{
+    font-size: 24px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.footer img{
+    width: 150px;
+}
+
+.iconss .fa-brands{
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.fa-brands, .fa-heart{
+    color: rgb(59, 0, 114);
+    font-size: 18px;
+}

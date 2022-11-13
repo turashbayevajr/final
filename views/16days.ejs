@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>16 days</title>
+    <link rel="stylesheet" href="./css/days.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
-<header>
+<body>
+<header style="background-image: url('<%=media/bg_header.png %>')">
     <nav>
         <div class="header_flex">
             <div class="header_logo">
@@ -18,18 +19,14 @@
 
             <div class="header_links">
                 <a href="">Home</a>
-                <a href="">Бла Бла</a>
-                <a href="">Бла Бла</a>
-                <a href="">Contact Us</a>
-
-                <button href="" class="btn_ct">ask for help</button>
+                <a href="#idfooter">Contact Us</a>
             </div>
         </div>
     </nav>
 
     <div class="textbox">
         <div class="textbox_title">
-            <h1 class="header_title">Tuimedaq</h1>
+            <h1 class="header_title">TÜİMEDAQ</h1>
             <h1 class="typerwrite_block">
                 <a href="" class="typewrite" data-period="1500"
                    data-type='[ "Abuse is not okay", "Violence is never the solution", "Work for peace", "Love is what we need" ]'>
@@ -38,8 +35,7 @@
             </h1>
 
             <div class="header_buttons">
-                <a href="/16days">16 days</a>
-                <a href="">mobile app</a>
+                <a href="#idblock1">16 days</a>
             </div>
         </div>
 
@@ -49,27 +45,108 @@
 
     </div>
 </header>
-<table class="table">
-    <thead>
 
-    <tr>
-        <th scope="col">Number</th>
-        <th scope="col">Title</th>
-        <th scope="col">Completed</th>
-        <th>
-            <button class="btm btn-primary">
-                <a href="new.html" >Add Tournament </a>
-            </button></th>
+<div id="idblock1" class="block1">
+    <h1><span class="bv">16 days</span> <span class="blue">challenge</span></h1>
 
-    </tr>
-    </thead>
-    <tbody>
-    <%tasksList.forEach(task => {%>
-        <tr>
-            <th scope="row"><%=  task.number %></th>
-            <td><%= task.title %></td>
-            <td><%= task.completed %></td>
-        </tr>
-    <%})%>
-    </tbody>
-</table>
+    <div class="todo">
+        <div class="do">
+            <input class="input" checked type="checkbox">
+            <p>1.  Написать письмо в будущее, чтобы двигаться в сторону прекрасного "Я"</p>
+        </div>
+
+        <div class="do">
+            <input checked type="checkbox">
+            <p>2. Заботиться о здоровье, правильное питание весь день</p>
+        </div>
+
+        <div class="do">
+            <input checked type="checkbox">
+            <p>3. Целый день говорить себе комплименты смотря в зеркало и находить новые положительные черты характера</p>
+        </div>
+
+        <div class="do">
+            <input type="checkbox">
+            <p>4.Физическая активность: 100 берпи</p>
+        </div>
+
+        <div class="do">
+            <input type="checkbox">
+            <p>5. Посвятить один день чтению книги, для того чтобы найти ответы на интересующиеся вопросы</p>
+        </div>
+
+        <div class="do">
+            <input type="checkbox">
+            <p>6. Прогуляться по парку утром и развеять свои мысли</p>
+        </div>
+
+        <div class="do">
+            <input type="checkbox">
+            <p>7. Уделить 15-20 мин медитированию и йоге</p>
+        </div>
+
+        <div class="do">
+            <input type="checkbox">
+            <p>8.  Физическая активность: 20 приседаний 3 подхода</p>
+        </div>
+
+        <div class="do">
+            <input type="checkbox">
+            <p>9. Уделите время для себя, примите горячую ванну и насладитесь фильмом со сладостями</p>
+        </div>
+
+        <div class="do">
+            <input type="checkbox">
+            <p>10. Позовите друга в театр или на концерт, потому что увлечение искусством улучшает настроение, и отгоняет плохие мысли</p>
+        </div>
+
+        <div class="do">
+            <input type="checkbox">
+            <p>11. Выйдите из интернета! Избегайте проверки Интернета (даже если вам этого хочется)</p>
+        </div>
+
+        <div class="do">
+            <input type="checkbox">
+            <p>12. Физическая активность: 1 минута планки 4 подхода</p>
+        </div>
+
+        <div class="do">
+            <input type="checkbox">
+            <p>13. Примите утром контрастный душ, чтобы взбодриться и стать спокойнее и увереннее в себе</p>
+        </div>
+
+        <div class="do">
+            <input type="checkbox">
+            <p>14. Приготовьте свою любимую еду или десерт и угости прохожих</p>
+        </div>
+
+        <div class="do">
+            <input type="checkbox">
+            <p>15. Напишите пятим звездам об их хороших качествах</p>
+        </div>
+
+        <div class="do">
+            <input type="checkbox">
+            <p>16.  Физическая активность: 3 км бега</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div id="idfooter" class="footer">
+        <h4>ABOUT US</h4>
+        <img src="media/logo.png" alt="">
+
+        <div class="iconss">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+
+        <p>made with <i class="fa-solid fa-heart"></i></p>
+    </div>
+
+</footer>
+</body>
+</html>
