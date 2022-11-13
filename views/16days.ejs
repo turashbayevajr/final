@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<header>
+    <nav>
+        <div class="header_flex">
+            <div class="header_logo">
+                <img src="media/logo.png" alt="">
+            </div>
+
+            <div class="header_links">
+                <a href="">Home</a>
+                <a href="">Бла Бла</a>
+                <a href="">Бла Бла</a>
+                <a href="">Contact Us</a>
+
+                <button href="" class="btn_ct">ask for help</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="textbox">
+        <div class="textbox_title">
+            <h1 class="header_title">Tuimedaq</h1>
+            <h1 class="typerwrite_block">
+                <a href="" class="typewrite" data-period="1500"
+                   data-type='[ "Abuse is not okay", "Violence is never the solution", "Work for peace", "Love is what we need" ]'>
+                    <span class="wrap"></span>
+                </a>
+            </h1>
+
+            <div class="header_buttons">
+                <a href="/16days">16 days</a>
+                <a href="">mobile app</a>
+            </div>
+        </div>
+
+        <div class="textbox_photo">
+            <img src="media/photo2.png" alt="">
+        </div>
+
+    </div>
+</header>
+<table class="table">
+    <thead>
+
+    <tr>
+        <th scope="col">Number</th>
+        <th scope="col">Title</th>
+        <th scope="col">Completed</th>
+        <th>
+            <button class="btm btn-primary">
+                <a href="new.html" >Add Tournament </a>
+            </button></th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <%tasksList.forEach(task => {%>
+        <tr>
+            <th scope="row"><%=  task.number %></th>
+            <td><%= task.title %></td>
+            <td><%= task.completed %></td>
+        </tr>
+    <%})%>
+    </tbody>
+</table>

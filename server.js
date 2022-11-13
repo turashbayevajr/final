@@ -35,59 +35,40 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
 });
 
-const notesSchema ={
-  title: String,
-  content: String,
-  type: String,
-  data: String,
-  createdAt: {
-      type: Date,
-      default: Date.now
-  },
+const tasksSchema ={
+    number: String,
+    title: String,
+    completed: String
 }
-const Note = mongoose.model('Note',notesSchema);
+const Task = mongoose.model('Task',tasksSchema);
 
 
 router.get('/', function (req, res, next) {
 return res.render('index.ejs');
 });
-router.get('/sport', function (req, res, next) {
-return res.render('sport.ejs');
-});
-router.get('/cyber', function (req, res, next) {
-return res.render('cyber.ejs');
+router.get('/16days', function (req, res, next) {
+return res.render('16days.ejs');
 });
 router.get('/new', ((req, res) => {
   res.sendFile(__dirname+ 'new.html');
 }))
-app.get('/sport', (req, res) => {
+app.get('/16days', (req, res) => {
 
-  Note.find({},function (err, notes) {
-      res.render('sport.ejs', {
-          notesList: notes
+  Task.find({},function (err, tasks) {
+      res.render('16days.ejs', {
+          tasksList: tasks
       })
   })
 })
-app.get('/cyber', (req, res) => {
-
-    Note.find({},function (err, notes) {
-        res.render('cyber.ejs', {
-            notesList: notes
-        })
-    })
-})
-
 
 app.post('/new', function (req,res){
-  let newNote = new Note({
+  let newTask = new Task({
+      number: req.body.number,
       title: req.body.title,
-      type: req.body.type,
-      data: req.body.data,
-      content: req.body.content,
-      createdAt: new Date()
+      completed: req.body.completed
   })
-  newNote.save();
-  res.redirect('/new');
+  newTask.save();
+  res.redirect('/16days');
 })
 
 

@@ -4,20 +4,9 @@ var User = require('../models/user');
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 
-const notesSchema ={
-    title: String,
-    content: String,
-    type: String,
-    data: String,
-    createdAt: {
-        type: Date,
-        default: Date.now
-    },
-}
-const Note1 = mongoose.model('Note1',notesSchema);
 
-router.get('/sport', function (req, res, next) {
-	return res.render('sport.ejs');
+router.get('/16days', function (req, res, next) {
+	return res.render('/16days.ejs');
 });
 router.get('/cyber', function (req, res, next) {
 	return res.render('cyber.ejs');
@@ -25,27 +14,7 @@ router.get('/cyber', function (req, res, next) {
 router.get('/new', ((req, res) => {
 	return res.render('new.ejs');
 }))
-router.get('/sport', (req, res) => {
 
-    Note1.find({},function (err, notes) {
-        res.render('pages/sport', {
-            notesList: notes
-        })
-    })
-})
-
-
-router.post('/new', function (req,res){
-    let newNote = new Note1({
-        title: req.body.title,
-        type: req.body.type,
-        data: req.body.data,
-        content: req.body.content,
-        createdAt: new Date()
-    })
-    newNote.save();
-    res.redirect('/new');
-})
 
 
 router.get('/', function (req, res, next) {
