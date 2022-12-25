@@ -1,21 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
+var Form = require('../models/form');
 var path = require('path');
 var app  = express();
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
-
-
-router.get('/16days', function (req, res, next) {
-	return res.render('/16days.ejs');
-});
-router.get('/cyber', function (req, res, next) {
-	return res.render('cyber.ejs');
-});
-router.get('/new', ((req, res) => {
-	return res.render('new.ejs');
-}))
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
@@ -102,15 +94,42 @@ router.post('/login', function (req, res, next) {
 router.get('/profile', function (req, res, next) {
 	
 	User.findOne({unique_id:req.session.userId},function(err,data){
-	
-		
 		if(!data){
 			res.redirect('/');
 		}else{
-
 			return res.render('data.ejs', {"name":data.username,"email":data.email});
 		}
 	});
+});
+router.get('/news', function (req, res, next) {
+
+	User.findOne({unique_id:req.session.userId},function(err,data){
+		if(!data){
+			res.redirect('/');
+		}else{
+			return res.render('news.ejs', {"name":data.username,"email":data.email});
+		}
+	});
+});
+router.get('/help', function (req, res, next) {
+
+	User.findOne({unique_id:req.session.userId},function(err,data){
+		if(!data){
+			res.redirect('/');
+		}else{
+			return res.render('help.ejs', {"name":data.username,"email":data.email});
+		}
+	});
+});
+
+
+router.post("/help",  function (req, res) {
+	let newForm = new Form({
+		age: req.body.age,
+		message: req.body.message,
+	});
+	newForm.save();
+	res.redirect('/help')
 });
 
 router.get('/logout', function (req, res, next) {
@@ -160,6 +179,7 @@ router.post('/forgetpass', function (req, res, next) {
 	});
 	
 });
+
 
 
 module.exports = router;

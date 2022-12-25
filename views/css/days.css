@@ -1,24 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap');
 
 body{
-    font-family: 'Sono', sans-serif;;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-header{
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    background-position: center;
-    background-size: cover;
-}
-
-nav{
-    background-color: white;
+    font-family: 'Sono', sans-serif;
+    align-items: center;
 }
 
 .header_flex{
@@ -50,85 +34,8 @@ nav{
     transform: scale(1.1)
 }
 
-.textbox{
-    color: white;
-    width: 80%;
-    margin: auto;
-    padding-top: 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.textbox_title, .textbox_photo{
-    flex-basis: 45%;
-}
 
-.textbox_photo img{
-    width: 100%;
-}
-
-.textbox h1{
-    text-transform: uppercase;
-    font-size: 52px;
-}
-
-.typewrite{
-    text-transform: lowercase;
-    text-decoration: none;
-    color: white;
-    font-size: 28px;
-    color:#F7859C;
-}
-
-.header_buttons{
-    padding-top: 20px;
-    display: flex;
-}
-
-.header_buttons a, .btn_ct{
-    color: white;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: 1px solid white;
-    background-color: rgba(104, 8, 194, 0.1);
-    padding: 12px;
-    margin-right: 40px;
-    border-radius: 10px;
-    transition: 1s;
-    display: block;
-}
-
-.btn_ct{
-    display: inline;
-    background-color: rgba(104, 8, 194, 0.5);
-    cursor: pointer;
-}
-
-.header_buttons a:hover, .btn_ct:hover{
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-    background-color: #F7859C;
-}
-
-.block1{
-    width: 90%;
-    margin: 70px auto;
-    text-align: center;
-}
-
-.block1 .bv{
-    color:rgb(104, 8, 194);
-}
-
-.block1 .pink{
-    color:#F7859C
-}
-
-.block1 .blue{
-    color:cornflowerblue
-}
 
 .do{
     padding-top: 50px;
@@ -188,7 +95,7 @@ footer h4{
     font-size: 16px;
     border: none;
     outline: none;
-    color: white;
+    color: black;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -220,3 +127,8 @@ footer h4{
 .dropdown:hover .dropdown-content {
     display: block;
 }
+form {
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30% }
+
