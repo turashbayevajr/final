@@ -35,41 +35,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
 });
 
-const tasksSchema ={
-    number: String,
-    title: String,
-    completed: String
-}
-const Task = mongoose.model('Task',tasksSchema);
 
-
-router.get('/', function (req, res, next) {
-return res.render('index.ejs');
-});
-router.get('/16days', function (req, res, next) {
-return res.render('16days.ejs');
-});
-router.get('/new', ((req, res) => {
-  res.sendFile(__dirname+ 'new.html');
-}))
-app.get('/16days', (req, res) => {
-
-  Task.find({},function (err, tasks) {
-      res.render('16days.ejs', {
-          tasksList: tasks
-      })
-  })
-})
-
-app.post('/new', function (req,res){
-  let newTask = new Task({
-      number: req.body.number,
-      title: req.body.title,
-      completed: req.body.completed
-  })
-  newTask.save();
-  res.redirect('/16days');
-})
 
 
 app.use(session({
@@ -80,10 +46,6 @@ app.use(session({
     mongooseConnection: db
   })
 }));
-
-
-
-
 
 var index = require('./routes/index');
 app.use('/', index);

@@ -235,3 +235,6 @@ nav{
     background-color: black;
     flex-basis: 30%;
 }
+.dropdown{
+    color: black;
+}

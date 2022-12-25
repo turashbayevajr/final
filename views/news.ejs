@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="./css/days.css">
+    <link rel="stylesheet" href="./css/popup.css">
+    <link rel="stylesheet" href="./css/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="header_flex">
+            <div class="header_logo">
+                <img src="media/logo.png" alt="">
+            </div>
+
+            <div class="header_links">
+                <a href="https://anellatte.github.io/tuimedaq/">Home</a>
+                <a href="/news">News</a>
+                <a href="#idfooter">Contact Us</a>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Profile
+                </button>
+                <div class="dropdown-content">
+                    <li class="nav-item"><a class="nav-link">Name:  <%= name %> </a></li>
+                    <li class="nav-item"><a class="nav-link"> Email: <%= email %></a></li>
+                    <li class="nav-item"><a class="nav-link"  href="/logout">Logout</a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="wrapper">
+        <p><a class="button" href="#popup1">Add post</a></p>
+    </div>
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>What do you want to share?</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <p>This is done totally without JavaScript. Just HTML and CSS.</p>
+            </div>
+        </div>
+    </div>
+    <section id="timeline">
+        <article>
+            <div class="inner">
+      <span class="date">
+        <span class="day">30<sup>th</sup></span>
+        <span class="month">Jan</span>
+        <span class="year">2014</span>
+      </span>
+                <h2>The Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis.</p>
+            </div>
+        </article>
+        <article>
+            <div class="inner">
+      <span class="date">
+        <span class="day">26<sup>th</sup></span>
+        <span class="month">Jan</span>
+        <span class="year">2014</span>
+      </span>
+                <h2>The Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis.</p>
+            </div>
+        </article>
+        <article>
+            <div class="inner">
+      <span class="date">
+        <span class="day">26<sup>th</sup></span>
+        <span class="month">Jan</span>
+        <span class="year">2014</span>
+      </span>
+                <h2>The Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis.</p>
+            </div>
+        </article>
+        <article>
+            <div class="inner">
+      <span class="date">
+        <span class="day">26<sup>th</sup></span>
+        <span class="month">Jan</span>
+        <span class="year">2014</span>
+      </span>
+                <h2>The Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis.</p>
+            </div>
+        </article>
+        <article>
+            <div class="inner">
+      <span class="date">
+        <span class="day">26<sup>th</sup></span>
+        <span class="month">Jan</span>
+        <span class="year">2014</span>
+      </span>
+                <h2>The Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis.</p>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

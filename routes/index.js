@@ -7,17 +7,10 @@ const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 
 
-router.get('/16days', function (req, res, next) {
-	return res.render('/16days.ejs');
-});
-router.get('/cyber', function (req, res, next) {
-	return res.render('cyber.ejs');
-});
+
 router.get('/new', ((req, res) => {
 	return res.render('new.ejs');
-}))
-
-
+}));
 
 router.get('/', function (req, res, next) {
 	return res.render('index.ejs');
@@ -102,13 +95,22 @@ router.post('/login', function (req, res, next) {
 router.get('/profile', function (req, res, next) {
 	
 	User.findOne({unique_id:req.session.userId},function(err,data){
-	
-		
 		if(!data){
 			res.redirect('/');
 		}else{
 
 			return res.render('data.ejs', {"name":data.username,"email":data.email});
+		}
+	});
+});
+router.get('/news', function (req, res, next) {
+
+	User.findOne({unique_id:req.session.userId},function(err,data){
+		if(!data){
+			res.redirect('/');
+		}else{
+
+			return res.render('news.ejs', {"name":data.username,"email":data.email});
 		}
 	});
 });
