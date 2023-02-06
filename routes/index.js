@@ -2,11 +2,14 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
 var Form = require('../models/form');
+var Post = require('../models/post');
 var path = require('path');
 var app  = express();
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+const fs = require("fs");
+const multer = require("multer");
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
@@ -111,6 +114,37 @@ router.get('/news', function (req, res, next) {
 		}
 	});
 });
+const storage = multer.diskStorage({
+	destination: function (req, file, cb) {
+		cb(null, 'uploads')
+	},
+	filename: function (req, file, cb) {
+		cb(null, Date.now() + path.extname(file.originalname))
+	}
+})
+const upload = multer({ storage: storage })
+router.post("/news",upload.single('image'),(req,res)=>{
+	var img = fs.readFileSync(req.file.path);
+	var encode_img = img.toString('base64');
+	var final_img = {
+		contentType:req.file.mimetype,
+		image:new Buffer(encode_img,'base64')
+	};
+	Post.create(final_img,function(err,result){
+		if(err){
+			console.log(err);
+		}else{
+			console.log(result.img.Buffer);
+			console.log("Saved To database");
+			res.contentType(final_img.contentType);
+			res.send(final_img.image);
+		}
+	})
+})
+
+
+
+
 router.get('/help', function (req, res, next) {
 
 	User.findOne({unique_id:req.session.userId},function(err,data){
@@ -127,6 +161,7 @@ router.post("/help",  function (req, res) {
 	let newForm = new Form({
 		age: req.body.age,
 		message: req.body.message,
+		user_id: req.session.userId
 	});
 	newForm.save();
 	res.redirect('/help')

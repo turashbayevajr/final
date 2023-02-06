@@ -2,18 +2,16 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 const postSchema = new Schema({
     unique_id: Number,
-    imageSrc:{
-        type: String,
-        default: ''
-    },
-    user:{
-        ref: 'users',
-        type:Schema.Types.ObjectId
-    },
+    user_id: Number,
     text:{
         type: String,
-        min: 10,
+        // min: 10,
         required: true
+    },
+    img: {
+        data: Buffer,
+        contentType: String
     }
 })
-module.exports=mongoose.model('posts', postSchema)
+Post=mongoose.model('Post', postSchema);
+module.exports = Post;
